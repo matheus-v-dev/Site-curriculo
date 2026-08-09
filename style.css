@@ -3,10 +3,13 @@
 }
 
 
+
 #navegador ul.navhorizontal {
 position: fixed;
 top: 0;
-left: 0;}
+left: 0;
+z-index: 1;/*ficar "por cima de todos os conteudos da pagina*/
+}
 
 #navegador ul{
 margin: 0;
@@ -60,6 +63,7 @@ background-color: rgb(125, 180, 228);
     background-color: rgb(73, 244, 244);
 }
 
+/*--GUIA AUXILIAR DA PAGINA(INCIO/FIM)*/
 .guia {
     position: fixed;
     bottom: 0;
@@ -108,34 +112,46 @@ border: 1px solid black;
     color: white;
 }
 
-#fim{
-    
-    transform: skew(5deg,-30deg);           
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(255, 0, 0, 0.3);
-    color: black;
-    padding: 10px;
-    text-align: center;
-    z-index: 1;/* para que fique a frente dos outros elementos */
 
-}
-
+/*-------SOBRE MIM------------*/
 .dadospessoais{
-    margin: 0 auto;
+    margin: 0 ;
     text-align: left;
-    padding: 0px 20px;
-    background-color: aquamarine;
+    padding-left: 10px;
+    width: 100%;
+    background-color: rgb(188, 186, 217);
+    border-left: 2px solid ;
 }
 
 .dadospessoais td{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 0px 10px;
-    width: fit-content;
 }
-.InfPessoais p{
-    padding: 0;
-    margin: 0;
-    width: 100px;
-    float: left;
+#InfPessoais{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+    border: 5px solid black;
+    overflow: auto;
+    
+}
+#InfPessoais img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+}
+#InfPessoais table{
+
+height: auto;
+max-width: 50%;
+}
+
+
+body{
+    background-color: rgb(95, 95, 226);
 }
