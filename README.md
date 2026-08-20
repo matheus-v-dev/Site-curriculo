@@ -7,7 +7,7 @@ minha formação acadêmica, experiências profissionais e habilidades de forma 
 
 ## 📚 Conteúdo
 - **Sobre mim**: informações pessoais, hobbies, apresentação.  
-- **Formação**: cursos, idiomas, formação educacional mais recente.//cursos, idiomas, formação educacional mais recente. 
+- **Formação**: cursos, idiomas, formação educacional mais recente. 
 - **Portfólio**: links para trabalhos já realizados. 
 - **Experiência profissional**: estágios e trabalhos anteriores  
 - **Habilidades**: linguagens, ferramentas e competências  
