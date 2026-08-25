@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="format-detection" content="telephone=no">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Matheus.Site</title>
 </head>
 <body>
+    <header>
+        <img src="capa.jpg" alt="capa-tecnologia">
+    </header>
+
     <nav id="navegador">
         <ul class="navhorizontal">
-            <li ><a href="#Sobremim">Sobre mim</a> 
-                <ul>
+            <li>
+                <button class="menu-botao">Sobre mim</button>
+                <ul class="submenu">
                     <li><a href="#InfPessoais">Informações Pessoais</a></li>
                     <li><a href="#Hobbies">Hobbies</a></li>
                     <li><a href="#Apresentacao">Apresentação</a></li>
                 </ul>
             </li>
-            <li><a href="#Formacao1">Formação</a>
-                <ul>
+            <li>
+                <button class="menu-botao">Formação</button>
+                <ul class="submenu">
                     <li><a href="#Formacao2">Formação Acadêmica</a></li>
                     <li><a href="#Cursos">Cursos</a></li>
                     <li><a href="#Idiomas">Idiomas</a></li>
                 </ul>
             </li>    
-            <li><a href="#Portifolio">Portifolio</a> </li>
-            <li><a href="#Contato">Contato</a></li> 
+            <li>
+                <a href="#Portifolio" >Portifolio</a> </li>
+            <li>
+                <a href="#Contato">Contato</a></li> 
         </ul> 
     </nav>
-
+    
+   
     <section id="Sobremim">
         <h1>SOBRE MIM ...</h1>
         <section id="InfPessoais">
             <h2> INFORMAÇÕES PESSOAIS</h2>
-            <div class="info">
+            <div class="foto">
                 <img class="eu"  src="eu=formal.jpg" alt="minhaImagem" title="Matheus">
+            </div>
+            <div class="dados">
                 <table class="dadospessoais" >
                     <tr>
                         <th>Nome:</th>
@@ -60,6 +72,7 @@
                         <td>github.com/matheus-v-dev </td>
                     </tr>
                 </table>
+                
             </div> 
         </section>
         
@@ -136,18 +149,41 @@
     </section>
 
     <section id="Portifolio">
-        <p>links para trabalhos já realizados. </p>
+        <h2> Portifólio</h2>
+        <div>
+            <ul>
+                <li>https://github.com/matheus-v-dev/Site-curriculo</li>
+            </ul>
+        </div>
     </section>
     
-    <br><br>
+   
 
     <section id="Contato">
-        <p>formulário com campos nome, e-mail e mensagem (validação obrigatória em 
-JavaScript e simulação do envio). </p>
+        <div class="titulo"><h2> Contato</h2>
+</div>
+        <div class="f">
+        <form id="formulario">
+            
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email">
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem"></textarea>
+            
+            <button type="submit">Enviar</button>
+
+            <p id="resultado"></p>
+
+        </form>
+        </div>
     </section>
+    <footer>
 
-    <br><br>
-
+    </footer>
     <nav class="guia">
         <ul>
             <li><a href="#navegador">^</a></li>
@@ -158,5 +194,6 @@ JavaScript e simulação do envio). </p>
     
     <nav id="fim">
     </nav>
+    <script src="javaSCRIPT.js"></script>
 </body>
 </html>

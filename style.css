@@ -2,86 +2,115 @@
     *{box-sizing: border-box;}
     
     body{
-        background-color: rgb(95, 95, 226);
+        background-color: white;
         margin:0 8px; 
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
     }
 
     h1{
         display: block;
         width: 100%;
-        background-color: #14e225;
+        background-color: #1500ff;
     }
     
     h2{
         text-align: center;
         display: block;
         width: 100%;
-        background-color: #14e225;
+        background-color: #1500ff;
     }
     
     h3{
         color: rgb(16, 146, 202);
     }
 
-/*===Barra Navegação===*/
-    #navegador .navhorizontal{
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding: 0;
-        margin: 0;
-        z-index: 1000;
-    }
-
-    #navegador ul{
-        padding: 0;
-        width: 100%;
-        background-color: rgba(239, 137, 137,0.9);
-        display: flex;
-    }
-
-    #navegador ul li {
+    header{
         position: relative;
-        list-style-type: none;
-        flex: 1;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 150px;
+    }
+    header img{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 ;
+        height: 100%;
+    }
+    /*main{
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        grid-template-rows: auto;
+    }*/
+
+/*===Barra Navegação===*/
+    #navegador{
+        width: 100%;
+        background-color: rgb(80, 81, 173);
     }
 
-    #navegador ul.navhorizontal li a {
-        display: block;
-        text-decoration: none;
-        color: #e2144a;
-        padding: 14px 16px;
-        border: 1px solid #555;
-        text-align: center;
-    }
-
-    #navegador li ul {
-        list-style-type: none;
-        position: absolute;
-        top: 100%;       
+    .navhorizontal{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
         padding: 0;
+        list-style: none;
+    }
+
+    .navhorizontal > li{
+        position: relative;
+        border-right: 1px solid #000000;
+    }
+    
+    .navhorizontal > li:last-child{
+        border-right: none;
+    }
+
+    .navhorizontal a,
+    .menu-botao{
+        display: block;
+        padding: 14px 20px;
+        background-color: transparent;
+        border: none;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;/*gera a maozinha quando o curso chega em cima*/
+    }
+
+    .submenu{
         display: none;
-        background-color: #e2144a;
-        min-width: 100%;
+        position: absolute;/*ele vai aparecer logo abaixo do seu antecessor, e nao influenciara no padding determinado anteriormente*/
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: rgb(85, 105, 239);
+        border: 1px solid black;
     }
 
-    #navegador ul li a:hover {
-        text-decoration: underline;
-        font-weight: bold;
-        background-color: #555;
-    }
-
-    #navegador ul li:hover ul {
+    .submenu a{
         display: block;
-        background-color: rgb(125, 180, 228);
+        padding: 12px 15px;
+        text-align: left;
     }
 
-    #navegador ul li:hover > a{
+    .submenu li{
+        border-bottom: 1px solid black;
+    }
+
+    .submenu li:last-child{
+        border-bottom: none;
+    }
+
+    .submenu.aberto{
         display: block;
-        background-color: rgb(73, 244, 244);
     }
-
+    
 /*--GUIA AUXILIAR DA PAGINA(INCIO/FIM)*/
     .guia {
         position: fixed;
@@ -117,53 +146,112 @@
 
     }
 
-    .guia ul li a:hover {
+    /*.guia ul li a:hover {
         background-color: rgb(64, 0, 255);
         color: white;
-    }
+    }*/
 
-    .guia ul li a:active {
+   /* .guia ul li a:active {
         background-color: rgb(255, 0, 179);
         color: white;
-    }
+    }*/
 
 /*-------SOBRE MIM------------*/
     #Sobremim{
-        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #Sobremim h1{
+        max-width: 100%;
+        width: 100%;
+        padding-left: 20px;
+        margin: 0 auto;
     }
 
     #InfPessoais{
-        scroll-margin-top: 50px;
-    }
-
-    table.dadospessoais{
-        border-left: black solid 1px;
-        text-align: left;
-        padding-left: 10px;
-        width: 75%;
-        height: auto;
-        background-color: rgb(188, 186, 217);
-    }
-
-    .eu{
-        width: 25%;
-        height: auto;
-        display: block;
-        margin: 0 ;
-    }
-
-    .dadospessoais td{
-        padding: 0px 10px;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto;
+        padding:0 ;
     }
     
-    .info{
-        display: flex;
-        background-color: blue;
-        height:auto;
-        width: 100%;
-        margin-top: 15px;
+    #InfPessoais h2{
+        grid-column: 1/-1;
     }
+
+    #InfPessoais .foto{
+        grid-column: 1;
+        height: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .foto .eu{
+        max-width: 100%;
+        width:100%;
+        height: 100%;
+    }
+
+    .dados, .dados table{
+        padding: 10px;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .dados table th,
+    .dados table td{
+        width: 50%;
+        text-align: left;
+    }
+
+    /********* @media  ************/
+    @media all and (min-width: 1000px) {
+            body {
+                margin: 0;
+                background-color: rgb(4, 4, 4);
+                color: rgb(255, 255, 255);
+            }
+            
+
+            .foto, .dados{
+        background-color: #443ceb;
+    }
+        }
+
+        /* media query para dispositivos móveis */
+        @media screen and (max-width: 767px) {
+            body{
+                background-color: rgb(0, 0, 0);
+            margin: 0; 
+            color: rgb(255, 255, 255);           
+            }
+           
+            #InfPessoais{
+                grid-template-columns: 1fr;
+            }
+            .foto {
+                grid-column:1;
+                margin: 0 auto;
+            }
+          
+            .dados{
+                grid-column:1;
+                margin: 20px auto;
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+        }
+           
+        
+    /***************************/
    
 /*=====HOBBIES=======*/
     #Hobbies{
@@ -177,7 +265,7 @@
     }
     
     .hobby{
-        background-color:rgb(165, 212, 157);
+        background-color:rgb(64, 72, 79);
         text-align: center;
         justify-content: center;
     }
@@ -188,7 +276,7 @@
     }
     
     .paragrafo {
-        background-color: aliceblue;
+        background-color: rgb(64, 72, 79);
         font-size: 20px;
         align-content: center;
         
@@ -199,9 +287,9 @@
         text-align:justify;
     }
 
-/*===FORMAÇAO===*/
+/*===============FORMAÇAO===========*/
     #Formacao1 section{
-        background-color: aliceblue;
+        background-color: rgb(64, 72, 79);
     }
     
     #Formacao1{
@@ -221,4 +309,95 @@
         gap: 10px;
     
         font-size: large;
+    }
+
+    /*======Formualario=======*/
+    #Contato{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content auto;
+        margin: 0;
+        padding: 0;
+    
+    }
+
+    #Contato .titulo {
+        grid-row: 1;
+        grid-column: 1/-1;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #Contato .f{
+        grid-row: 2;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    #formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #formulario label {
+        font-weight: bold;
+    }
+
+    #formulario input,
+    #formulario textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #999;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: inherit;
+        box-sizing: border-box;
+    }
+
+    #formulario textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    #formulario button {
+        width: 120px;
+        padding: 12px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #resultado {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+
+    /* ===== CELULAR ===== */
+
+    @media screen and (max-width: 767px) {
+
+        #Contato {
+            width: 100%;
+            padding: 15px;
+            margin: 30px auto;
+        }
+
+        #formulario input,
+        #formulario textarea {
+            font-size: 16px;
+        }
+
+        #formulario button {
+            width: 100%;
+        }
     }
