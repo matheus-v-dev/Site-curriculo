@@ -12,7 +12,7 @@ minha formação acadêmica, experiências profissionais e habilidades de forma 
 - **Experiência profissional**: estágios e trabalhos anteriores  
 - **Habilidades**: linguagens, ferramentas e competências  
 - **Projetos**: links para portfólio e trabalhos  
-- **Contato**: email, LinkedIn, GitHub.Formulário com campos nome, e-mail e mensagem (validação obrigatória em 
+- **Contato**:Formulário com campos nome, e-mail e mensagem (validação obrigatória em 
 JavaScript e simulação do envio)
 
 ---
